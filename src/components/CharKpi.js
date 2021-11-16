@@ -5,7 +5,7 @@ import { Pie } from "react-chartjs-2";
 
 const CharKpi = () => {
   const { kpi, setKpi } = useContext(KpiContext);
-  useEffect(async () => {
+  useEffect(() => {
     async function fetchData() {
       const rows = await Api.getClienteKpi();
       if (rows) {
@@ -13,7 +13,7 @@ const CharKpi = () => {
       }
     }
     fetchData();
-  }, []);
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const data = ({ average_age = 0, standard_deviation = 0 }) => ({
     labels: ["Promedio Edad", "Desviacion Estandar"],

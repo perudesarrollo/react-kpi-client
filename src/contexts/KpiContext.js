@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const KpiContext = createContext();
 const KpiContextProvider = ({ children }) => {
   const [kpi, setKpi] = useState([]);
-  useEffect(async () => {
+  useEffect(() => {
   }, [])
 
   return (

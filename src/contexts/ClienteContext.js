@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const ClienteContext = createContext();
 const ClienteContextProvider = ({ children }) => {
   const [cliente, setCliente] = useState([]);
-  useEffect(async () => {
+  useEffect(() => {
   }, [])
 
   return (

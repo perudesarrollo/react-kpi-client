@@ -1,5 +1,4 @@
 import axios from "axios";
-import { TokenService } from "./storage.service";
 import swal from "sweetalert";
 
 class ApiService {
@@ -12,13 +11,7 @@ class ApiService {
     axios.defaults.headers.common["Content-Type"] = "application/json";
   }
 
-  setHeader() {
-    if (TokenService.getToken()) {
-      axios.defaults.headers.common[
-        "Authorization"
-      ] = `Bearer ${TokenService.getToken()}`;
-    }
-  }
+  setHeader() {}
 
   removeHeader() {
     axios.defaults.headers.common = {};
